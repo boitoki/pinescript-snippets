@@ -1,0 +1,6 @@
+f_heikinashi () =>
+    hopen = na
+    hclose = ohlc4
+    hopen := na(hopen[1]) ? ohlc4[1] : (hopen[1] + hclose[1]) / 2
+    
+    [hopen, hclose]
